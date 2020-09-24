@@ -1,4 +1,4 @@
-(defproject http-kit "2.5.0"
+(defproject org.senatehouse/http-kit "2.5.0-httpsfix-1.1"
   :author "Feng Shen (@shenfeng)"
   :description "High-performance event-driven HTTP client/server for Clojure"
   :url "http://http-kit.org/"
@@ -33,6 +33,8 @@
    :benchmark :benchmark
    :all (fn [_] true)}
 
+  :deploy-repositories [["releases"  {:sign-releases false :url "https://clojars.org/repo"}]
+                        ["snapshots" {:sign-releases false :url "https://clojars.org/repo"}]]
   :profiles
   {:provided {:dependencies [[org.clojure/clojure "1.5.1"]]}
    :test
