@@ -13,8 +13,9 @@
   (if (.startsWith s "1.") ; e.g. "1.6.0_23"
     (Integer/parseInt (.substring s 2 3))
     (let [dot-idx (.indexOf s ".")] ; e.g. "9.0.1"
-      (when (not= dot-idx -1)
-        (Integer/parseInt (.substring s 0 dot-idx))))))
+      (if (not= dot-idx -1)
+        (Integer/parseInt (.substring s 0 dot-idx))
+        (Integer/parseInt s)))))
 
 (comment
   (parse-java-version "1.6.0_23") ; 6
