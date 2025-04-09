@@ -1,4 +1,4 @@
-(defproject org.senatehouse/http-kit "2.5.0-httpsfix-1.1"
+(defproject org.senatehouse/http-kit "2.5.0-httpsfix-1.2"
   :author "Feng Shen (@shenfeng)"
   :description "High-performance event-driven HTTP client/server for Clojure"
   :url "http://http-kit.org/"
